@@ -97,7 +97,12 @@ export const adminAPI = {
   getUsers: (params) => api.get('/admin/users', { params }),
   updateUser: (id, data) => api.patch(`/admin/users/${id}`, data),
   getMarketConfig: () => api.get('/admin/market-config'),
-  upsertMarketConfig: (data) => api.post('/admin/market-config', data)
+  upsertMarketConfig: (data) => api.post('/admin/market-config', data),
+  // DB Manager
+  getDbStatus: () => api.get('/admin/db/status'),
+  getDbActivity: (params) => api.get('/admin/db/activity', { params }),
+  dbResetPassword: (data) => api.post('/admin/db/reset-password', data),
+  dbUnlockAccount: (data) => api.post('/admin/db/unlock', data)
 }
 
 export default api

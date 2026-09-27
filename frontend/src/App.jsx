@@ -17,6 +17,7 @@ import Subscription from './pages/Subscription'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import AdminUsers from './pages/admin/AdminUsers'
 import AdminConfig from './pages/admin/AdminConfig'
+import AdminDatabase from './pages/admin/AdminDatabase'
 import NotFound from './pages/NotFound'
 import LoadingSpinner from './components/LoadingSpinner'
 
@@ -65,6 +66,7 @@ export default function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/users" element={<AdminUsers />} />
         <Route path="/admin/config" element={<AdminConfig />} />
+        <Route path="/admin/database" element={<AdminDatabase />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

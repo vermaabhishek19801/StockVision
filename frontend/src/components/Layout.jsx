@@ -3,7 +3,7 @@ import { useState } from 'react'
 import useAuthStore from '../context/authStore'
 import {
   FiHome, FiTrendingUp, FiBookmark, FiBriefcase, FiFilter,
-  FiZap, FiCreditCard, FiUsers, FiSettings, FiLogOut, FiMenu, FiX, FiBell, FiShield
+  FiZap, FiCreditCard, FiUsers, FiSettings, FiLogOut, FiMenu, FiX, FiBell, FiShield, FiDatabase
 } from 'react-icons/fi'
 import SearchBar from './SearchBar'
 import MarketTicker from './MarketTicker'
@@ -21,7 +21,8 @@ const navItems = [
 const adminItems = [
   { to: '/admin', icon: FiHome, label: 'Admin Home' },
   { to: '/admin/users', icon: FiUsers, label: 'Users' },
-  { to: '/admin/config', icon: FiSettings, label: 'Market Config' }
+  { to: '/admin/config', icon: FiSettings, label: 'Market Config' },
+  { to: '/admin/database', icon: FiDatabase, label: 'Database' }
 ]
 
 export default function Layout() {

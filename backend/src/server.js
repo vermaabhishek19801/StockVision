@@ -49,6 +49,7 @@ const predictionRoutes = require('./routes/prediction');
 const configRoutes = require('./routes/config');
 const marketRoutes = require('./routes/market');
 const twoFactorRoutes = require('./routes/twoFactor');
+const dbRoutes = require('./routes/db');
 
 const app = express();
 const server = http.createServer(app);
@@ -161,6 +162,7 @@ app.use('/api/auth', authLimiter, authRoutes);
 app.use('/api/auth/2fa', authLimiter, twoFactorRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/admin', adminLimiter, adminRoutes);
+app.use('/api/admin/db', adminLimiter, dbRoutes);
 app.use('/api/stocks', stockRoutes);
 app.use('/api/watchlist', watchlistRoutes);
 app.use('/api/portfolio', portfolioRoutes);
